@@ -1,5 +1,7 @@
 from dataclasses import dataclass
 
+from pygame import Surface
+
 from hero import Hero
 from sprites import Sprites, load_sprites
 
@@ -22,3 +24,6 @@ class Game:
                 hero_size=(screen_10, screen_10),
             ),
         )
+
+    def update(self):
+        self.hero.update()

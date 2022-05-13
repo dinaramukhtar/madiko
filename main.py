@@ -15,6 +15,7 @@ game = Game.new_game(screen_10=screen_10)
 
 
 while game.playing:  # Game loop
+    game.update()
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             game.playing = False
@@ -24,7 +25,7 @@ while game.playing:  # Game loop
 
     screen.fill((255, 255, 255))
 
-    screen.blit(game.sprites.hero_idle_right, (10, 10))
+    screen.blit(game.sprites.hero_idle_right, (game.hero.x, game.hero.y))
 
     pygame.display.flip()
     clock.tick(20)
