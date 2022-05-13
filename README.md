@@ -1,2 +1,2 @@
-# madiko
-Madiko Jump and Run
+# Madiko
+Madiko Jump and Run game
